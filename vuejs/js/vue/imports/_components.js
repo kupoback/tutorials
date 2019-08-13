@@ -30,10 +30,11 @@ const gameCard = Vue.component('game-card', {
                         <span v-else>HATE It</span>
                     </button>
                 </div>
-                <p class="class-text" v-if="gameData.rating > 10">This games <b>AMAZING</b>!</p>
+                <p class="class-text" v-if="gameData.rating > 10">This game is <b>AMAZING</b>!</p>
                 <p class="class-text" v-else-if="gameData.rating > 8">Wow, this game must be <b>really</b> good!</p>
+                <p class="class-text" v-else-if="gameData.name !== 'Fallout 76'">This games not bad. Least it's not <b>Fallout 76</b>!</p>
                 <p class="class-text" v-else-if="gameData.rating < 3">Wow this game must be <b>REALLY</b> bad</p>
-                <p class="class-text" v-else>This gameData's not bad. Least it's not <b>Fallout 76</b>!</p>
+                <p class="class-text" v-else>This game is pretty bad.</p>
             </div>
         </div>
     </div>`,
