@@ -1,0 +1,1 @@
+{"version":3,"sources":["basic/_base.scss"],"names":[],"mappings":"AAAA,QACI,sBAAuB,CAG3B,aACW,aAAc","file":"main.min.css","sourcesContent":[".hidden {\n    display: none!important;\n}\n\n.rating {\n    span { color: #f44336; }\n}"]}
