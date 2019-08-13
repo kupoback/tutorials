@@ -17,7 +17,7 @@ const app2 = new Vue({
 	el: "#app-2",
 	data: {
 		games: [
-            {
+			{
 				name: 'Super Mario 64',
 				console: 'Nintendo 64',
 				rating: 8
@@ -43,20 +43,80 @@ const app2 = new Vue({
 				rating: 11
 			}
 		]
-    }
+	}
 });
 
 const app3 = new Vue({
-	el : '#app-3',
-	
+	el: '#app-3',
+
 });
 
 const app4 = new Vue({
-	el: '#app-4'
+	el: '#app-4',
+	data: {
+		people: [
+			{
+				name: 'Mario',
+				age: 38
+			},
+			{
+				name: 'Luigi',
+				age: 38
+			},
+			{
+				name: 'Samus',
+				age: 31
+			},
+			{
+				name: 'Link',
+				age: 20
+			},
+			{
+				name: 'Marina',
+				age: 32
+			},
+		]
+	}
+});
+
+const app5 = new Vue({
+	el : '#app-5',
+	data() {
+		return {
+			favouriteGame: null,
+			response : ''
+		}
+	},
+	watch : {
+		favouriteGame(newValue, oldValue) {
+			if (!newValue) return
+
+          if (newValue.toLowerCase().indexOf('metroid') !== -1) {
+            this.response = 'Ceres station is under attack!'
+            return
+          }
+
+          if (newValue.toLowerCase().indexOf('zelda') !== -1) {
+            this.response = 'Its dangerous to go alone, take this 🗡️'
+            return
+          }
+
+          if (
+            oldValue.toLowerCase().indexOf('metroid') !== -1 &&
+            newValue.toLowerCase().indexOf('metroid') === -1
+          ) {
+            this.response = 'Nothing is true , everything is permitted'
+            return
+          }
+
+          this.response = 'Sure, why not?'
+
+		}
+	}
 });
 
 export default {
-	components : {
+	components: {
 		awesomeButton,
 		gameCard,
 		ageCalculator

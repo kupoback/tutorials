@@ -21,11 +21,11 @@ const gameCard = Vue.component('game-card', {
                 <h4 class="mb-3 class-title">{{ gameData.name }}</small></h4>
                 <p class="class-text rating"><b>Rating</b>: <b>{{gameData.rating}}/10</b> <span v-for="star in gameData.rating">&hearts;</span></p>
                 <div class="col-xs-12 mb-3">
-                    <button @click="increaseRating" class="btn btn-primary">
+                    <button @click="increaseRating(gameData)" class="btn btn-primary">
                         <span v-if="gameData.rating > 7">Love it</span>
                         <span v-else>Like It</span>
                     </button>
-                    <button @click="decreaseRating" class="btn btn-primary btn-danger">
+                    <button @click="decreaseRating(gameData)" class="btn btn-primary btn-danger">
                         <span v-if="gameData.rating > 3">Dislike it</span>
                         <span v-else>HATE It</span>
                     </button>
@@ -38,19 +38,30 @@ const gameCard = Vue.component('game-card', {
         </div>
     </div>`,
 	methods: {
-		increaseRating() {
-            this.game.rating <= 10 ? this.game.rating++ : null;
+		increaseRating(game) {
+            game.rating <= 10 ? game.rating++ : null;
 		},
-		decreaseRating() {
-			this.game.rating > 1 ? this.game.rating-- : null;
+		decreaseRating(game) {
+			game.rating > 1 ? game.rating-- : null;
 		}
 	}
 })
 
 const ageCalculator = Vue.component('age-calculator', {
+    props: {
+        person: {
+          type: Object,
+          required: true
+        }
+    },
     template : `
-    <p>NAME has been kicking butt for X days!</p>
-    `
+    <p>{{person.name}} has been kicking butt for {{daysAlive}} days!</p>
+    `,
+    computed: {
+        daysAlive() {
+            return this.person.age * 365
+        }
+    },
 })
 
 export default {
