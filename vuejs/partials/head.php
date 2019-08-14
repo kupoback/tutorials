@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
 	      media="all">
-	<link rel="stylesheet" href="/dist/css/main.min.css" media="all">
+	<link rel="stylesheet" href="./dist/css/main.min.css" media="all">
 
 </head>
 
