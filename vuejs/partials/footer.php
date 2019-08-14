@@ -13,6 +13,7 @@
 
 	<!-- Vue JS	 -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 	<?php if ( $vue === true ) {
 		printf('<script src="./dist/js/scripts.min.js"></script>');
 	} ?>

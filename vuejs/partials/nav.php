@@ -6,8 +6,8 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+			<ul class="navbar-nav ml-auto" id="menu">
+				<li class="nav-item active" id="listing">
 					<a class="nav-link" href="https://dev.makris.io/vuejs">VueJS
 						<span class="sr-only">(current)</span>
 					</a>
