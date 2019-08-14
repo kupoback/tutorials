@@ -6,7 +6,7 @@
 				<div class="col-md-4">
 					<h3 class="mb-3 text-left">Projects</h3>
 					<div class="list-group">
-						<a href="/vuejs.php" class="list-group-item list-group-item-action">Vue JS Projects</a>
+						<a href="./vuejs.php" class="list-group-item list-group-item-action">Vue JS Projects</a>
 					</div>
 				</div>
 			</div>
